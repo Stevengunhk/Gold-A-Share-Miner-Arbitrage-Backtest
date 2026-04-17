@@ -1,0 +1,46 @@
+==============================================================
+  LAYER 6 — OUT-OF-SAMPLE VALIDATION REPORT
+  Gold / A-Share Miner Arbitrage Backtest
+==============================================================
+
+  TEST A — TRAIN/TEST SPLIT
+----------------------------------------
+  Best IS config   : mag=0.75%  win=1d  SR(IS)=1.783
+  OOS Sharpe       : 3.444
+  OOS Ann Return   : 103.2%
+  OOS Max Drawdown : -14.2%
+  OOS Win Rate     : 54.2%
+  OOS Trades       : 261
+  Configs tested   : 120
+  PSR              : 1.000  (prob true SR > 0)
+  DSR              : 0.977  (prob SR is skill not luck)
+  PASS  PSR > 0.95 — high confidence true SR > 0
+  PASS  DSR > 0.95 — edge survives multiple-testing penalty
+
+  TEST B — WALK-FORWARD OPTIMISATION
+----------------------------------------
+  Windows          : 10
+  WFO OOS Sharpe   : 2.122
+  WFO OOS Ann Ret  : 64.8%
+  WFO OOS MDD      : -30.8%
+  Mean IS  Sharpe  : 2.626
+  Mean OOS Sharpe  : 2.412
+  OOS/IS ratio     : 0.919
+  PASS  OOS/IS=0.92 > 0.5 — acceptable degradation
+
+  TEST C — PARAMETER STABILITY
+----------------------------------------
+  Rolling window   : 504d
+  Mean SR          : 2.486
+  Std  SR          : 1.396
+  % windows SR>0   : 100%
+  % windows SR>1   : 76%
+  PASS  100% windows profitable — structurally robust
+
+==============================================================
+  OVERALL VERDICT
+----------------------------------------
+  Tests passed: 4/4
+  STRATEGY VALIDATED — proceed to paper trading
+
+==============================================================
